@@ -8,7 +8,7 @@ on:
       - "k8s/**"               # Trigger on Kubernetes config changes
 
 jobs:
-  deploy:runs-on: self-hosted
+  deploy:
     runs-on: self-hosted
 
     steps:
