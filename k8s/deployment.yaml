@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobilenet-serving
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mobilenet-serving
+  template:
+    metadata:
+      labels:
+        app: mobilenet-serving
+    spec:
+      containers:
+      - name: mobilenet-serving
+        image: parth630/mobilenet-serving
+        ports:
+        - containerPort: 8501
+        - containerPort: 8500
+
