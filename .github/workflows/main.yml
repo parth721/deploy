@@ -8,8 +8,8 @@ on:
       - "k8s/**"               # Trigger on Kubernetes config changes
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  deploy:runs-on: self-hosted
+    runs-on: self-hosted
 
     steps:
     - name: Checkout Repository
